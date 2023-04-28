@@ -277,7 +277,27 @@ i {
     margin: 0 auto;
 }
 
-/* Footer */
+/* === DAYS of WEEK === */
+.days-container {
+    padding: 4rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: var(--accent-clr);
+}
+
+.days {
+    color: var(--dark-clr);
+    padding: 20px;
+    text-align: center;
+    background-color: var(--light-clr);
+    border-radius: 10px;
+    box-shadow: 17px -5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* === Footer === */
 .footer {
     background-color: var(--accent-clr);
     padding-bottom: 2rem;
@@ -328,9 +348,13 @@ i {
     opacity: .8;
 }
 
-/* @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
 
-} */
+    .days-container {
+        flex-direction: row;
+    }
+
+}
 
 @media screen and (min-width: 1000px) {
     .nav-mobile {
@@ -383,6 +407,10 @@ i {
 
     .about-us .text-content-group {
         grid-column: span 5;
+    }
+
+    .days-container {
+        flex-direction: row;
     }
 
     .services-container {
