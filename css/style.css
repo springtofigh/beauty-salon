@@ -1,0 +1,400 @@
+/*! === FONTS === */
+@import url('./font.css');
+
+/*! === VARIABLES === */
+:root {
+    --light-clr: #fff;
+    --dark-clr: #504f4f;
+    --accent-clr: #f86868;
+    --font-size-xsm: 1.2rem;
+    --font-size-sm: 1.6rem;
+    --font-size-md: 2.4rem;
+    --font-size-lg: 3.6rem;
+        --body-font: YekanBakh;
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+    
+    --margin-sm: 1rem;
+    --margin-md: 2rem;
+    --margin-lg: 3rem;
+
+    --section-spacing: 8rem;
+
+    --gap-sm: 1.5rem;
+    --gap-md: 2rem;
+    --gap-lg: 4rem;
+
+}
+
+/*! === BASE === */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* font-size: 62.5%; */
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--body-font);
+    line-height: 1.5;
+    color: var(--dark-clr);
+    overflow-x: hidden;
+}
+
+a {
+    color: var(--dark-clr);
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+i {
+    font-size: var(--margin-sm);
+}
+
+/*! === SCROLLBAR === */
+::-webkit-scrollbar {
+    width: 11px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--light-clr-2);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Reusable */
+.container {
+    max-width: 116rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.place-items-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sm-screen-hidden {
+    display: none !important;
+}
+
+.d-grid {
+    display: grid;
+}
+
+.section {
+    padding-block: var(--section-spacing);
+}
+
+/* === NAVBAR === */
+.header {
+    background-color: var(--light-clr);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.nav{
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: inherit;
+}
+
+.logo {
+    font-size: var(--margin-md);
+    font-weight: var(--font-weight-light);
+    color: var(--accent-clr);
+}
+
+.menu-toggle-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: var(--accent-clr);
+    color: var(--light-clr);
+    transition: color .25s;
+    cursor: pointer;
+}
+
+.menu-close-icon {
+    display: none;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--margin-md);
+}
+
+.list-link {
+    position: relative;
+}
+
+
+.nav-mobile {
+    background-color: #f8f8f8;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    padding: 1.5rem;
+    transform: translateY(-100%);
+    transition: transform .25s;
+    z-index: -1;
+}
+
+/* NAVBAR STYLES */
+.nav.active .nav-mobile {
+    transform: translateY(4rem);
+}
+
+.nav.active .menu-open-icon {
+    display: none;
+}
+
+.nav.active .menu-close-icon {
+    display: block;
+}
+
+/* SHOWCASE*/
+.hero {
+    background: url('../images/210501-2e-sessie-salonfoto-depijp-salonpagina-scaled.jpg') center no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 5;
+}
+
+.hero::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+}
+
+.hero-container {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-container-inner{
+    max-width: 78rem;
+    text-align: center;
+    color: var(--light-clr);
+}
+
+.btn-join {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-md);
+    justify-content: center;
+}
+
+.btn-light {
+    background-color: var(--light-clr);
+    color: var(--dark-clr);
+}
+
+.btn-light:hover {
+    color: var(--accent-clr);
+}
+
+/* === SERVICES === */
+.services {
+    padding: 6rem 1.5rem;
+}
+
+.our-services {
+    padding: 0 1.5rem;
+}
+
+/* ABOUT */
+.about {
+    padding: 6rem 1.5rem;
+}
+
+.about-us {
+    padding: 0 1.5rem;
+}
+
+.description-1 {
+    margin-bottom: 2.2rem;
+}
+
+.description-2 {
+    margin-bottom: 2rem;
+}
+
+.contact-us {
+    display: inline-block;
+    padding:5px 20px;
+    border:1px solid var(--accent-clr);
+}
+
+.about-us {
+    padding: 0 1.5rem;
+}
+
+/* .about-us .text-content-group {
+    margin: 8rem 0 2rem;
+} */
+
+.section-image-group .image {
+    margin: 0 auto;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--accent-clr);
+    padding-bottom: 2rem;
+}
+
+.footer-container-inner {
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: var(--gap-md);
+}
+
+.contact-infformation address {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-infformation .list {
+    flex-direction: row;
+    margin-top: 1.5rem;
+}
+
+.footer .list-link {
+    transition: color .25s;
+}
+
+.footer .list-link::after {
+    display: none;
+}
+
+.footer .list-link:hover {
+    color: var(--light-clr);
+}
+
+.footer-title {
+    font-size: var(--font-size-sm);
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.footer-sperator {
+    margin-block:2.5rem;
+    opacity: .5;
+}
+
+.copyright-container {
+    text-align: center;
+}
+
+.copyright {
+    opacity: .8;
+}
+
+/* @media screen and (min-width: 768px) {
+
+} */
+
+@media screen and (min-width: 1000px) {
+    .nav-mobile {
+        width: initial;
+        background-color: transparent;
+        padding: initial;
+        position: initial;
+        transition: initial;
+        transform: initial;
+        z-index: initial;
+    }
+
+    .nav .list {
+        flex-direction: row;
+    }
+
+    .sm-screen-hidden {
+        display: block !important;
+    }
+
+    .lg-screen-hidden {
+        display: none;
+    }
+
+    .nav.active .nav-mobile {
+        transform: initial;
+    }
+
+    .header::before {
+        display: none;
+    }
+
+    .hero-container {
+        gap: 10rem;
+    }
+
+    .hero-container .image-box {
+        min-height: 35rem;
+    }
+
+    .section-container {
+        grid-template-columns: repeat(12,1fr);
+        column-gap: 2rem;
+    }
+
+    .about-us .section-image-group {
+        grid-column: span 7;
+        margin: auto;
+    }
+
+    .about-us .text-content-group {
+        grid-column: span 5;
+    }
+
+    .services-container {
+        grid-template-columns: repeat(12,1fr);
+        column-gap: 2rem;
+    }
+
+    .our-services .section-image-group {
+        grid-column: span 7;
+        margin: auto;
+    }
+
+    .our-services .text-content-group {
+        grid-column: span 5;
+    }
+
+}
