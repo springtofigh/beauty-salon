@@ -240,6 +240,40 @@ i {
 
 .our-services {
     padding: 0 1.5rem;
+    gap: 8rem;
+}
+
+.services-information-title {
+    margin-bottom: 2rem;
+}
+
+.services-information-description:first-of-type {
+    margin-bottom: 1.5rem;
+}
+
+.services-information-description:last-of-type {
+    margin-bottom: 1.5rem;
+}
+
+.services-images {
+    display: grid;
+    grid-template-columns: repeat(12 ,1fr);
+    margin-inline:auto;
+}
+
+.services-images-image-top {
+    grid-column:4/-1;
+    grid-row: 1/span 4;
+}
+
+.services-images-image-bottom {
+    grid-column:1/7;
+    grid-row: 3/span 5;
+    z-index: 10;
+}
+
+.text-content-group {
+    margin: 8rem 0 2rem;
 }
 
 /* ABOUT */
@@ -269,10 +303,6 @@ i {
     padding: 0 1.5rem;
 }
 
-/* .about-us .text-content-group {
-    margin: 8rem 0 2rem;
-} */
-
 .section-image-group .image {
     margin: 0 auto;
 }
@@ -289,8 +319,9 @@ i {
 }
 
 .days {
+    width: 100px;
     color: var(--dark-clr);
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     background-color: var(--light-clr);
     border-radius: 10px;
@@ -416,6 +447,12 @@ i {
     .services-container {
         grid-template-columns: repeat(12,1fr);
         column-gap: 2rem;
+    }
+
+    .our-services {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        column-gap: 2.5rem;
     }
 
     .our-services .section-image-group {
