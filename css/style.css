@@ -183,8 +183,14 @@ i {
 
 /* SHOWCASE*/
 .hero {
-    background: url('../images/210501-2e-sessie-salonfoto-depijp-salonpagina-scaled.jpg') center no-repeat;
+    width: 100%;
+    height: 600px;
+    background: url('../images/210501-2e-sessie-salonfoto-depijp-salonpagina-scaled.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
+    display: flex;
+    align-items: center;
     position: relative;
     z-index: 5;
 }
@@ -229,7 +235,7 @@ i {
 
 /* === SERVICES === */
 .services {
-    padding: 6rem 1.5rem;
+    padding-inline:1.5rem;
 }
 
 .our-services {
@@ -238,7 +244,7 @@ i {
 
 /* ABOUT */
 .about {
-    padding: 6rem 1.5rem;
+    padding-inline:1.5rem;
 }
 
 .about-us {
@@ -307,10 +313,6 @@ i {
 
 .footer-title {
     font-size: var(--font-size-sm);
-}
-
-.underline {
-    text-decoration: underline;
 }
 
 .footer-sperator {
