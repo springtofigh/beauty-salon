@@ -10,7 +10,7 @@
     --font-size-sm: 1.6rem;
     --font-size-md: 2.4rem;
     --font-size-lg: 3.6rem;
-        --body-font: YekanBakh;
+    --body-font: YekanBakh;
     --font-weight-light: 300;
     --font-weight-normal: 400;
     --font-weight-bold: 700;
@@ -19,7 +19,7 @@
     --margin-md: 2rem;
     --margin-lg: 3rem;
 
-    --section-spacing: 8rem;
+    --section-spacing: 6rem;
 
     --gap-sm: 1.5rem;
     --gap-md: 2rem;
@@ -128,7 +128,7 @@ i {
 
 .logo {
     font-size: var(--margin-md);
-    font-weight: var(--font-weight-light);
+    font-weight: 500;
     color: var(--accent-clr);
 }
 
@@ -166,6 +166,11 @@ i {
     transform: translateY(-100%);
     transition: transform .25s;
     z-index: -1;
+}
+
+.nav-mobile li {
+    font-size: 23px;
+    font-weight: var(--font-weight-light);
 }
 
 /* NAVBAR STYLES */
@@ -211,27 +216,27 @@ i {
     justify-content: center;
 }
 
-.hero-container-inner{
+.hero-container-inner {
     max-width: 78rem;
     text-align: center;
     color: var(--light-clr);
 }
 
-.btn-join {
-    display: flex;
-    flex-direction: column;
-    gap: var(--gap-md);
-    justify-content: center;
+.hero-container-inner .title {
+    font-size: var(--font-size-sm);
+    font-weight: 500;
 }
 
-.btn-light {
-    background-color: var(--light-clr);
-    color: var(--dark-clr);
+.hero-container-inner .second-title{
+    margin-bottom: 20px;
 }
 
-.btn-light:hover {
-    color: var(--accent-clr);
+.hero-container-inner .description {
+    font-size: 17px;
+    line-height: 1.5rem;
+    font-weight: var(--font-weight-light);
 }
+
 
 /* === SERVICES === */
 .services {
@@ -385,6 +390,14 @@ i {
         flex-direction: row;
     }
 
+    .hero-container-inner .title {
+        font-size: var(--font-size-md);
+    }
+
+    .hero-container-inner .description {
+        font-size: 20px;
+    }
+
 }
 
 @media screen and (min-width: 1000px) {
@@ -426,6 +439,11 @@ i {
         min-height: 35rem;
     }
 
+    .hero-container-inner .title {
+        font-size: var(--font-size-lg);
+        font-weight: 500;
+    }
+
     .section-container {
         grid-template-columns: repeat(12,1fr);
         column-gap: 2rem;
@@ -438,10 +456,6 @@ i {
 
     .about-us .text-content-group {
         grid-column: span 5;
-    }
-
-    .days-container {
-        flex-direction: row;
     }
 
     .services-container {
