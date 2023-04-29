@@ -33,3 +33,6 @@ navLinks.forEach(link => link.addEventListener('click' , () => {
     current[0].className = current[0].className.replace(' current' , "");
     link.className += " current"
 }));
+
+
+// ===  Slider  ===
