@@ -108,6 +108,11 @@ i {
     padding-block: var(--section-spacing);
 }
 
+.section-title {
+    font-size: var(--font-size-sm);
+    margin-bottom: 15px;
+}
+
 /* === NAVBAR === */
 .header {
     background-color: var(--light-clr);
