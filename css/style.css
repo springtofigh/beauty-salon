@@ -443,8 +443,35 @@ i {
     transform: translateY(-5px);
 }
 
+.footer-sperator {
+    margin-bottom: 20px;
+}
+
+.footer-bottom {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-bottom .footer-bottom-list {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    text-align: center;
+}
+
+.footer-bottom .footer-bottom-list a {
+    color: var(--light-clr);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.footer-bottom-container div {
+    margin-bottom: 25px;
+}
+
 .copyright-container {
     text-align: center;
+    color: var(--light-clr);
+    font-size: 15px;
 }
 
 .copyright {
@@ -478,6 +505,14 @@ i {
     .product-card .product-price {
         font-size: 22px;
         font-weight: 500;
+    }
+
+    .footer-bottom .footer-bottom-list {
+        grid-template-columns: repeat(6,1fr);
+    }
+
+    .footer-bottom .footer-bottom-list a {
+        font-size: 23px;
     }
 
 }
