@@ -253,6 +253,47 @@ i {
     gap: 8rem;
 }
 
+.services-information .main-services {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-sm);
+}
+
+.main-services .service-container {
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.service-icon {
+    padding: 15px 20px;
+    background: var(--accent-clr);
+    display:flex ;
+    align-items: center;
+    justify-content: center;
+    color: var(--light-clr);
+}
+
+.service-icon i {
+    font-size: 35px;
+}
+
+.service-text {
+    padding: 15px 20px;
+    background: #a7a5a5;
+    width: 100%;
+}
+
+.service-text h3 {
+    color: #313131;
+    font-weight: var(--font-weight-bold);
+}
+
+.service-text p {
+    font-size: 18px;
+    font-weight: 500;
+}
+
 .services-information-title {
     margin-bottom: 2rem;
 }
