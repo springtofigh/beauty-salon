@@ -36,3 +36,16 @@ navLinks.forEach(link => link.addEventListener('click' , () => {
 
 
 // ===  Slider  ===
+
+// DARK MOOD
+
+const blackThem = document.querySelector("#them-changer");
+blackThem.addEventListener("click" , () => {
+        blackThem.classList.toggle('ri-sun-fill');
+    if (blackThem.classList.contains('ri-sun-fill')) {
+        const color = document.body
+        color.classList.add("active");
+    } else {
+        document.body.classList.remove('active');
+    }
+})
