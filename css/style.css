@@ -111,6 +111,17 @@ i {
 .section-title {
     font-size: var(--font-size-sm);
     margin-bottom: 15px;
+    position: relative; 
+}
+
+.section-title:after {
+    content : "";
+    position : absolute;
+    width : 50px;
+    height : 3px;
+    background-color: var(--accent-clr);
+    bottom: 0; 
+    right: 0;
 }
 
 /* === NAVBAR === */
